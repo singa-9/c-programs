@@ -1,0 +1,19 @@
+
+<?php
+	include('config.php');
+	$firstname = $_POST['firstname'];
+	$lastname = $_POST['lastname'];
+	$email = $_POST['email'];
+	$password = $_POST['password'];
+	$contact = $_POST['contact'];
+	$gender = $_POST['gender'];
+	$value='';
+	foreach ($POST['hobbies'] as $value) {
+		$value .= $value;
+	}
+	
+	$sql = "INSERT INTO tb_login (Firstname,Lastname,Email,Password,Contact,Gender,Hobbies) VALUES ('$firstname','$lastname','$email','$password','$contact','$gender','$hobbies')";
+	mysql_query($sql);
+	//header("location:success.php");
+	echo 'values inserted';
+?>
